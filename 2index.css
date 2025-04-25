@@ -1,0 +1,290 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* ==================== kedah perlis toggle button ======================== */
+  /* ==================== kedah perlis toggle button ======================== */
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  
+  h2, h4 {
+    font-family: 'Playfair Display', serif;
+    color: #2c3e50;
+  }
+  
+  .button-row {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 40px auto;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  ol {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffffcc; /* semi-transparent white */
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(10px);
+  }
+  
+  .btn {
+    padding: 12px 24px;
+    background: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: #1a252f;
+    transform: scale(1.05);
+  }
+  
+  ol {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.6s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* body {
+    background: linear-gradient(to right, #f0f4f8, #e9ecef);
+  } */
+
+  body {
+    background: url('imej/mountains-sky-bali-sunrise.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  /* ========================== kedah perlis toggle button ======================================= */
+  /* ========================== kedah perlis toggle button ========================== */
+  /* ========================== Vision, Mision, Paragraph =========================== */
+  /* ========================== Vision, Mision, Paragraph =========================== */
+  
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+  /* Header */
+  header {
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  
+  /* Paragraphs */
+  p {
+    max-width: 800px;
+    margin: 1.5rem auto;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-left: 5px solid var(--leaf);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    font-family: 'Inter', sans-serif;
+    color: #2e5339;
+  }
+
+  .hidden-paragraph {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+  }
+  
+  .fade-in-up {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* icon */
+  h1 i, h2 i {
+    color: #2c5f2d; /* a deep green */
+    margin-right: 8px;
+  }
+
+  /* ============================== service history ============================== */
+  
+  .icon-timeline {
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+    margin: 30px auto;
+    color: #2c3e50;
+    font-size: 1.5rem;
+  }
+  
+  .timeline {
+    border-left: 3px solid #2c3e50;
+    padding-left: 20px;
+    margin: 40px auto;
+    max-width: 600px;
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  .timeline-item i {
+    position: absolute;
+    left: -35px;
+    top: 0;
+    color: #27ae60;
+  }
+  
+  /* ========================== galery of service history ======================= */
+  
+  /* Base door link style */
+.door-link {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2c3e50;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s ease;
+}
+
+/* Icon animation on hover */
+.door-link i {
+  transition: transform 0.5s ease;
+  transform-origin: left center;
+}
+
+/* Make it swing open a little */
+.door-link:hover i {
+  transform: rotateY(50deg);
+  color: #27ae60;
+}
+
+/* ===========================animation when page load ========================== */
+  
+@keyframes doorFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px) rotateY(-45deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotateY(0);
+  }
+}
+
+.door-link {
+  animation: doorFadeIn 1s ease-in-out;
+}
+
+
+/* ========================== Vision, Mision, Paragraph =========================== */
+/* ========================== Vision, Mision, Paragraph =========================== */
+/* ========================== Contact us Footer ========================== */
+/* ========================== Contact us Footer ========================== */
+
+  /* Links */
+  a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Lists */
+  ol {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #ccc;
+  }
+  
+  li {
+    margin-bottom: 8px;
+  }
+  
+  
+  /* Hidden content */
+  .hidden {
+    display: none;
+  }
+
+/* Footer Styling */
+.footer {
+    background: #2c3e50;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+  }
+  
+  /* Social Icon Container */
+  .social-icons {
+    margin-top: 15px;
+  }
+  
+  /* General Icon Styling */
+  .social-icon {
+    margin: 0 15px;
+    font-size: 32px;
+    color: #25D366;
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  /* Hover Effects for WhatsApp Icons */
+  .whatsapp-icon:hover {
+    transform: scale(1.2);  /* Grow icon */
+    color: #128C7E;  /* Darker green for WhatsApp */
+  }
+  
+  /* Hover Effects for Facebook Icon */
+  .facebook-icon {
+    color: #1877F2; /* Facebook blue */
+  }
+  
+  .facebook-icon:hover {
+    transform: scale(1.2); /* Grow icon */
+    color: #0057b8;  /* Darker blue for Facebook */
+  }
+  
+  /* Footer Text Styling */
+  footer p {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  /* ========================== Contact us Footer ========================== */
