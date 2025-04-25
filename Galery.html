@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service History</title>
+  <link rel="stylesheet" href="Galery.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📘 Service History</h1>
+      <input type="text" id="searchInput" placeholder="Search service entries...">
+    </header>
+
+    <div class="timeline">
+      <div class="entry">
+        <div class="entry-date">2024-03-12</div>
+        <div class="entry-detail">Installed solar panel system in <strong>Kodiang</strong>.</div>
+      </div>
+      <div class="entry">
+        <div class="entry-date">2024-04-01</div>
+        <div class="entry-detail">Water tank maintenance in <strong>Kangar</strong>.</div>
+      </div>
+      <div class="entry">
+        <div class="entry-date">2024-04-18</div>
+        <div class="entry-detail">Roof inspection in <strong>Alor Setar</strong>.</div>
+      </div>
+      <!-- Add more entries as needed -->
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('searchInput').addEventListener('input', function () {
+      const filter = this.value.toLowerCase();
+      const entries = document.querySelectorAll('.entry');
+      entries.forEach(entry => {
+        const text = entry.textContent.toLowerCase();
+        entry.style.display = text.includes(filter) ? 'block' : 'none';
+      });
+    });
+  </script>
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+  
+    document.querySelectorAll('.entry').forEach(entry => {
+      observer.observe(entry);
+    });
+  </script>
+  
+</body>
+</html>
